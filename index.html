@@ -8,159 +8,40 @@
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
   <style>
-    html, body {
-      height: 100%;
-      width: 100%;
-      margin: 0;
-      font-family: 'Arial', sans-serif;
-    }
-
+    /* Keep this for the background and text glow effect */
     body {
-      background-image: url('honeycomb bg.png'); /* Honeycomb as the full background */
-      background-size: cover; /* Honeycomb covers the entire screen */
-      background-position: center; /* Center the honeycomb background */
-      background-repeat: no-repeat; /* No repeat for the honeycomb */
+      background-image: url('honeycomb bg.png'); /* Background image */
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
       background-attachment: fixed;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
-      min-width: 100vw;
+      height: 100vh;
+      margin: 0;
     }
 
-    .logo-container {
-      background-image: url('evolve Logo final with bg.png'); /* Evolve logo as the top image */
-      background-size: contain; /* Contain keeps the aspect ratio, adjusting the width as needed */
-      background-position: center; /* Center the evolve logo */
-      background-repeat: no-repeat; /* No repeat for the evolve logo */
-      width: 100%; /* Adjust width automatically */
-      height: 100vh; /* Full height of the screen */
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      position: relative;
-    }
-
-    .content {
-      color: #fff;
-      text-align: center;
-      z-index: 2;
-      position: relative;
-    }
-
+    /* Keep only for the text glow effect */
     .coming-soon {
-    font-size: 10rem;
-    padding: 10px 20px;
-    border-radius: 5px;
-    color: #0097b2; /* Light blue color */
-    text-shadow: 0 0 10px rgba(181, 240, 251, 0.8), /* Bright blue glow */
-                 0 0 20px rgba(181, 240, 251, 0.6), /* Softer glow */
-                 0 0 30px rgba(181, 240, 251, 0.4); /* Even fainter glow */
-    animation: fadeInOut 5s infinite; /* Looping fade animation */
-}
+      text-shadow: 0 0 10px rgba(181, 240, 251, 0.8), 
+                   0 0 20px rgba(181, 240, 251, 0.6),
+                   0 0 30px rgba(181, 240, 251, 0.4);
+      animation: fadeInOut 2s infinite;
+    }
 
-
-    /* Animation for the "Coming Soon" text */
+    /* Fading effect for coming soon */
     @keyframes fadeInOut {
-      0% {
-        opacity: 0;
-      }
-      50% {
-        opacity: 1;
-      }
-      100% {
-        opacity: 0;
-      }
-    }
-
-    /* Adjustments for smaller screens */
-    @media (max-width: 768px) {
-      .logo-container {
-        background-size: contain;
-        .coming-soon {
-            font-size: 5rem;
-        }
-      }
-    }
-
-      @media (max-width: 480px) {
-    /* Styles for mobile phones */
-    .logo-container {
-        font-size: 1.5rem;
-        /* Add other adjustments */
-        .coming-soon {
-            font-size: 3rem; /* Smallest size for mobile screens */
-    }
-}
-
-    @media (max-width: 1024px) {
-    /* Styles for medium-sized screens */
-    .logo-container {
-                /* Add other adjustments */
-        .coming-soon {
-            font-size: 7rem; /* Slightly smaller for tablets */
-        
-    }
-
-    @media (max-width: 1280px) {
-    /* Styles for laptops */
-    .logo-container {
-        font-size: 3rem;
-        /* Add other adjustments */
-    }
-
-    @media (max-width: 1440px) {
-    /* Styles for large desktops */
-    .logo-container {
-        font-size: 3.5rem;
-        /* Add other adjustments */
-    }
-
-    @media (max-width: 1920px) {
-    /* Styles for full HD desktops */
-    .logo-container {
-        font-size: 4rem;
-        /* Add other adjustments */
-    }
-
-    @media (min-width: 1920px) {
-    /* Styles for screens larger than Full HD */
-    .logo-container {
-        font-size: 4.5rem;
-        /* Add other adjustments */
-    }
-}
-
-}
-
-}
-
-}
-
-
-
-}
-
-}
-
-
-      .content h1 {
-        font-size: 2.5rem;
-      }
-
-      .coming-soon {
-        font-size: 20rem;
-      }
+      0% { opacity: 0; }
+      50% { opacity: 1; }
+      100% { opacity: 0; }
     }
   </style>
 </head>
-<body>
+<body class="d-flex flex-column justify-content-center align-items-center">
 
-<div class="logo-container">
-  <div class="content">
-    <p class="coming-soon">Coming Soon</p>
-  </div>
-</div>
+  <!-- Evolve logo with img-fluid class for responsive scaling -->
+  <img src="evolve Logo final with bg.png" class="img-fluid mb-3" alt="Evolve Logo">
+
+  <!-- Coming Soon text with Bootstrap typography -->
+  <p class="coming-soon display-1 text-center text-white">Coming Soon</p>
 
 <!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
