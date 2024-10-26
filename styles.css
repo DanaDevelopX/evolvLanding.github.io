@@ -1,3 +1,44 @@
-.img{
-    max-width: fit-content;
-}
+
+    /* Background styling */
+    body {
+      background-image: url('honeycomb bg.png');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      height: 100vh;
+      margin: 0;
+    }
+
+    /* Centering the content and stacking the text on top of the logo */
+    .container {
+      position: relative; /* Set relative positioning to allow absolute positioning for the text */
+    }
+
+    .coming-soon {
+      position: absolute;
+      top: 50%; /* Center vertically */
+      left: 50%; /* Center horizontally */
+      transform: translate(-50%, -50%); /* Adjust to truly center the text */
+      text-shadow: 0 0 10px rgba(31, 172, 197, 0.8), 
+                   0 0 20px rgba(31, 172, 197, 0.6),
+                   0 0 30px rgba(31, 172, 197, 0.4);
+      animation: fadeInOut 2s infinite;
+      z-index: 1; /* Ensure the text appears on top of the image */
+      color: rgba(248, 144, 8, 0.9);
+      font-style:oblique;
+    }
+
+    /* Fading effect for coming soon */
+    @keyframes fadeInOut {
+      0% { opacity: 0; }
+      50% { opacity: 1; }
+      100% { opacity: 0; }
+    }
+
+    /* Style the logo container */
+    .logo-container {
+      position: relative;
+      width: 100%; /* Ensure full width */
+      z-index: 0; /* Place behind the text */
+    }
