@@ -1,44 +1,50 @@
+/* Body Styling */
+body {
+  height: 100vh;
+  overflow-y: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-    /* Background styling */
-    body {
-      background-image: url('evolvEHS\ logo.png');
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      background-attachment: fixed;
-      height: 100vh;
-      margin: 0;
-    }
+/* Background Video Styling */
+#background-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1; /* Place behind all other content */
+}
 
-    /* Centering the content and stacking the text on top of the logo */
-    .container {
-      position: relative; /* Set relative positioning to allow absolute positioning for the text */
-    }
+/* Centering the content and stacking the text on top of the logo */
+/* Styling for the container */
+.container {
+  position: relative;
+  z-index: 1; /* Make sure container content is above the video */
+  text-align: center;
+}
 
-    .coming-soon {
-      position: absolute;
-      top: 50%; /* Center vertically */
-      left: 50%; /* Center horizontally */
-      transform: translate(-50%, -50%); /* Adjust to truly center the text */
-      text-shadow: 0 0 10px rgba(31, 172, 197, 0.8), 
-                   0 0 20px rgba(31, 172, 197, 0.6),
-                   0 0 30px rgba(31, 172, 197, 0.4);
-      animation: fadeInOut 2s infinite;
-      z-index: 1; /* Ensure the text appears on top of the image */
-      color: rgba(248, 144, 8, 0.9);
-      font-style:oblique;
-    }
 
-    /* Fading effect for coming soon */
-    @keyframes fadeInOut {
-      0% { opacity: 0; }
-      50% { opacity: 1; }
-      100% { opacity: 0; }
-    }
+.coming-soon {
+  text-shadow: 0 0 10px rgba(31, 172, 197, 0.8), 
+               0 0 20px rgba(31, 172, 197, 0.6),
+               0 0 30px rgba(31, 172, 197, 0.4);
+  color: rgba(248, 144, 8, 0.9);
+  font-style: oblique;
+}
 
-    /* Style the logo container */
-    .logo-container {
-      position: relative;
-      width: 100%; /* Ensure full width */
-      z-index: 0; /* Place behind the text */
-    }
+/* Responsive Form Styling */
+@media (max-width: 576px) {
+  #sign-up-form {
+    padding: 0 15px;
+  }
+}
+
+#sign-up-form {
+  margin-top: 50vh !important; /* Adjust this value for more or less space */
+}
+
+
+
