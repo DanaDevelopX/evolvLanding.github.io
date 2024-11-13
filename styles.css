@@ -28,9 +28,6 @@ body {
   #background-video {
     display: none; /* Hide video only on small screens */
   }
- #sign-up-form input[type="email"] {
-    font-size: 14px; /* Adjust this value as needed for mobile */
-    padding: 6px; /* Optional: adjust padding for better fit on mobile */
 }
 
 /* Container Styling */
