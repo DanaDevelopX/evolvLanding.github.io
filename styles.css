@@ -19,7 +19,7 @@ body {
 }
 
 /* Fallback background image for mobile */
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
   body {
     background-image: url('coming_soon_backup_image.png'); /* Replace with the actual image path */
     background-size: cover;
