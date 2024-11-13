@@ -5,7 +5,6 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: none; /* Default to no background image */
 }
 
 /* Background Video Styling */
@@ -31,18 +30,14 @@ body {
   }
 }
 
-
-
-
-/* Centering the content and stacking the text on top of the logo */
-/* Styling for the container */
+/* Container Styling */
 .container {
   position: relative;
   z-index: 1; /* Make sure container content is above the video */
   text-align: center;
 }
 
-
+/* Coming Soon Text Styling */
 .coming-soon {
   text-shadow: 0 0 10px rgba(31, 172, 197, 0.8), 
                0 0 20px rgba(31, 172, 197, 0.6),
@@ -51,16 +46,14 @@ body {
   font-style: oblique;
 }
 
-/* Responsive Form Styling */
+/* Form Positioning for Desktop */
+#sign-up-form {
+  margin-top: 50vh; /* Adjust this value for more or less space */
+}
+
+/* Responsive Form Styling for Smaller Screens */
 @media (max-width: 576px) {
   #sign-up-form {
     margin-top: 20vh; /* Adjust for smaller screens */
   }
 }
-
-#sign-up-form {
-  margin-top: 50vh !important; /* Adjust this value for more or less space */
-}
-
-
-
