@@ -107,7 +107,7 @@ body {
 
 /* Form Positioning for Desktop */
 #sign-up-form {
-  margin-top: 50vh; /* Adjust this value for more or less space */
+  margin-top: 50vh !important; /* Adjust this value for more or less space */
 }
 
 /* Responsive Form Styling for Smaller Screens */
