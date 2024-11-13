@@ -1,10 +1,11 @@
-/* General Body Styling for All Screen Sizes */
+/* Body Styling */
 body {
   height: 100vh;
   overflow-y: auto;
   display: flex;
   justify-content: center;
   align-items: center;
+  background-image: none; /* Default to no background image */
 }
 
 /* Background Video Styling */
@@ -15,31 +16,51 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  z-index: -1;
+  z-index: -1; /* Place behind all other content */
 }
 
-/* Fallback background image for mobile (small screens only) */
+/* Fallback background image for mobile */
 @media (max-width: 768px) {
-  #background-video {
-    display: none; /* Hide video only on small screens */
-  }
-
-  /* Apply background image only on mobile */
   body {
-    background-image: url('coming_soon_backup_image.png'); /* Replace with your actual image path */
+    background-image: url('coming_soon_backup_image.png'); /* Replace with the actual image path */
     background-size: cover;
     background-position: center;
-    background-repeat: no-repeat;
+  }
+   #background-video {
+    display: none; /* Hide video only on small screens */
   }
 }
 
-/* CSS for Form Positioning */
-#sign-up-form {
-  margin-top: 40vh; /* Adjust this value as needed */
+
+
+
+/* Centering the content and stacking the text on top of the logo */
+/* Styling for the container */
+.container {
+  position: relative;
+  z-index: 1; /* Make sure container content is above the video */
+  text-align: center;
 }
 
+
+.coming-soon {
+  text-shadow: 0 0 10px rgba(31, 172, 197, 0.8), 
+               0 0 20px rgba(31, 172, 197, 0.6),
+               0 0 30px rgba(31, 172, 197, 0.4);
+  color: rgba(248, 144, 8, 0.9);
+  font-style: oblique;
+}
+
+/* Responsive Form Styling */
 @media (max-width: 576px) {
   #sign-up-form {
-    margin-top: 20vh; /* Smaller top margin for very small screens */
+    margin-top: 20vh; /* Adjust for smaller screens */
   }
 }
+
+#sign-up-form {
+  margin-top: 50vh !important; /* Adjust this value for more or less space */
+}
+
+
+
