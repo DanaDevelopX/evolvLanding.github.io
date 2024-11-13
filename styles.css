@@ -24,9 +24,6 @@ body {
     background-image: url('coming_soon_backup_image.png'); /* Replace with the actual image path */
     background-size: cover;
     background-position: center;
-#sign-up-form {
-  margin-top: 100vh; /* Adjust this value for more or less space */
-}
   }
   #background-video {
     display: none; /* Hide video only on small screens */
