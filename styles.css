@@ -1,20 +1,11 @@
-/* Body Styling */
+/* General Body Styling */
 body {
   height: 100vh;
   overflow-y: auto;
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-/* Background Video Styling */
-#background-video {/* Body Styling */
-body {
-  height: 100vh;
-  overflow-y: auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  position: relative; /* Important for absolute positioning inside body */
 }
 
 /* Background Video Styling */
@@ -25,94 +16,33 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  z-index: -1; /* Place behind all other content */
+  z-index: -1;
 }
 
 /* Fallback background image for mobile */
 @media (max-width: 768px) {
   body {
-    background-image: url('coming_soon_backup_image.png'); /* Replace with the actual image path */
+    background-image: url('coming_soon_backup_image.png');
     background-size: cover;
     background-position: center;
   }
   #background-video {
-    display: none; /* Hide video only on small screens */
+    display: none;
   }
 }
 
-/* Container Styling */
-.container {
-  position: relative;
-  z-index: 1; /* Make sure container content is above the video */
-  text-align: center;
-}
-
-/* Coming Soon Text Styling */
-.coming-soon {
-  text-shadow: 0 0 10px rgba(31, 172, 197, 0.8), 
-               0 0 20px rgba(31, 172, 197, 0.6),
-               0 0 30px rgba(31, 172, 197, 0.4);
-  color: rgba(248, 144, 8, 0.9);
-  font-style: oblique;
-}
-
-/* Form Positioning for Desktop */
+/* Sign-Up Form Styling */
 #sign-up-form {
-  margin-top: 50vh; /* Adjust this value for more or less space */
+  position: absolute;
+  top: 70%; /* Adjust to control vertical positioning */
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2; /* Ensures form is above the background */
 }
 
-/* Responsive Form Styling for Smaller Screens */
+/* Mobile-Specific Positioning */
 @media (max-width: 576px) {
   #sign-up-form {
-    margin-top: 20vh; /* Adjust for smaller screens */
-  }
-}
-
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: -1; /* Place behind all other content */
-}
-
-/* Fallback background image for mobile */
-@media (max-width: 768px) {
-  body {
-    background-image: url('coming_soon_backup_image.png'); /* Replace with the actual image path */
-    background-size: cover;
-    background-position: center;
-  }
-  #background-video {
-    display: none; /* Hide video only on small screens */
-  }
-}
-
-/* Container Styling */
-.container {
-  position: relative;
-  z-index: 1; /* Make sure container content is above the video */
-  text-align: center;
-}
-
-/* Coming Soon Text Styling */
-.coming-soon {
-  text-shadow: 0 0 10px rgba(31, 172, 197, 0.8), 
-               0 0 20px rgba(31, 172, 197, 0.6),
-               0 0 30px rgba(31, 172, 197, 0.4);
-  color: rgba(248, 144, 8, 0.9);
-  font-style: oblique;
-}
-
-/* Form Positioning for Desktop */
-#sign-up-form {
-  margin-top: 50vh !important; /* Adjust this value for more or less space */
-}
-
-/* Responsive Form Styling for Smaller Screens */
-@media (max-width: 576px) {
-  #sign-up-form {
-    margin-top: 20vh; /* Adjust for smaller screens */
+    top: 75%; /* Adjust for smaller screens if needed */
   }
 }
