@@ -5,7 +5,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-    background-image: none; /* Default to no background image */
+  background-image: none; /* Default to no background image */
 }
 
 /* Background Video Styling */
@@ -26,7 +26,12 @@ body {
     background-size: cover;
     background-position: center;
   }
+  #background-video {
+    display: none; /* Hide video only on small screens */
+  }
 }
+
+
 
 
 /* Centering the content and stacking the text on top of the logo */
@@ -56,6 +61,3 @@ body {
 #sign-up-form {
   margin-top: 50vh !important; /* Adjust this value for more or less space */
 }
-
-
-
