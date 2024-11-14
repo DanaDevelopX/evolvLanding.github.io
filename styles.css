@@ -46,10 +46,44 @@ body {
   font-style: oblique;
 }
 
-/* Form Positioning for Desktop */
+/* Main Subscribe Form Styling */
 #sign-up-form {
-  margin-top: 50vh; /* Adjust this value for more or less space */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem; /* Adds spacing between input and button */
 }
+
+#sign-up-form input#email  {
+  background: linear-gradient(135deg, #ffffff, #e7e3fa);
+  border: 1px solid #d1d9e6;
+  
+  padding: 0.5rem;
+  color: #333;
+  width: 250px;
+  margin-top: 30vh;
+}
+
+
+#sign-up-form .btn-primary {
+  background: linear-gradient(135deg, #151ec7, #afb2fa);
+  border: none;
+  border-radius: 0.25rem;
+  color: white;
+  font-size: 1rem;
+  margin-top:30vh;
+  cursor: pointer;
+  transition: background-image 0.7s ease;
+}
+
+#sign-up-form .btn-primary:hover {
+  background: linear-gradient(135deg, #afb2fa, #151ec7); /* Reverse gradient for hover */
+}
+
+
+
+
+
 
 /* Responsive Form Styling for Smaller Screens */
 @media (max-width: 576px) {
@@ -57,3 +91,66 @@ body {
     margin-top: 20vh; /* Adjust for smaller screens */
   }
 }
+.btn-primary {
+  background: linear-gradient(135deg, #31a2c1, #1facc5); /* Gradient colors */
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, #1facc5, #31a2c1);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Hover effects for social icons */
+.footer a:hover {
+  color: #31a2c1; /* Changes color on hover */
+  transform: scale(1.2); /* Slightly enlarges the icon */
+  transition: transform 0.3s ease, color 0.3s ease; /* Smooth transition */
+}
+
+/* Footer Styling */
+footer {
+  background-color: #343a40; /* Dark background color */
+  color: #ffffff; /* Text color */
+  /*padding: 1rem 0; /*Reduce padding */
+  font-size: 0.9rem; /* Smaller font size */
+  min-height: 60px ; /* Adjust this value as needed */
+  padding: 0.5rem 0; /* Additional padding inside the footer */
+  }
+  
+
+
+.footer .container {
+  max-width: 100%; /* Ensures full width */
+}
+
+/* Reduce margin and padding for elements inside footer */
+.footer h5 {
+  margin-bottom: 0.25rem; /* Reduce space under headings */
+}
+
+.footer p, .footer ul, .footer input, .footer .btn-primary {
+  margin-bottom: 0.25rem; /* Reduce spacing for elements inside footer */
+}
+
+
+/* Align email input and button in the same line */
+.footer #email {
+  width: auto;
+  display: inline-block;
+  margin-right: 0.5rem;
+}
+
+.footer .btn-primary {
+  padding: 0.25rem 1rem; /* Reduce button padding */
+  font-size: 0.9rem; /* Smaller button font size */
+}
+
+.footer-section {
+  margin-bottom: 0; /* Remove bottom margin */
+  padding: 0.5rem; /* Adjust padding if needed */
+}
+
+
